@@ -14,7 +14,7 @@ HPARAMS: [
    gblur: true,
    brt_aug: true,
    crop_size: "1080,1920",
-   bs_trn: 2,
+   bs_trn: 1,
    poly_exp: 2,
    lr: 5e-4,
    rmi_loss: true,
