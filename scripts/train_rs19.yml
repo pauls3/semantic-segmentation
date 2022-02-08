@@ -2,7 +2,7 @@
 # Requires 32GB GPU
 # Adjust nproc_per_node according to how many GPUs you have
 
-CMD: "python -m torch.distributed.launch --nproc_per_node=2 train.py"
+CMD: "python -m torch.distributed.launch --nproc_per_node=4 train.py"
 
 HPARAMS: [
   {
@@ -23,7 +23,7 @@ HPARAMS: [
    supervised_mscale_loss_wt: 0.05,
    snapshot: "/home/stanik/repos/semantic-segmentation/checkpoints/cityscapes_trainval_ocr.HRNet_Mscale_nimble-chihuahua.pth",
    arch: ocrnet.HRNet_Mscale,
-   result_dir: "logs/rs19/cityscapes_sota_rs19_finetune_bs_2",
+   result_dir: "logs/rs19/cityscapes_sota_rs19_finetune_bs_1",
    RUNX.TAG: '{arch}',
   },
 ]
