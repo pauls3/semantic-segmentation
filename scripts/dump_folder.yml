@@ -4,19 +4,18 @@ CMD: "python -m torch.distributed.launch --nproc_per_node=1 train.py"
 
 HPARAMS: [
   {
-   dataset: cityscapes,
-   cv: 0,
+   dataset: railsem19,
    syncbn: true,
    apex: true,
    fp16: true,
    bs_val: 1,
    eval: folder,
-   eval_folder: './imgs/test_imgs',
+   eval_folder: "/home/stanik/datasets/nevada_test_images/",
    dump_assets: true,
    dump_all_images: true,
    n_scales: "0.5,1.0,2.0",
-   snapshot: "ASSETS_PATH/seg_weights/cityscapes_ocrnet.HRNet_Mscale_outstanding-turtle.pth",
+  snapshot: "/home/stanik/repos/semantic-segmentation/logs/rs19/cityscapes_sota_rs19_finetune_bs_1/best_checkpoint_ep98.pth",
    arch: ocrnet.HRNet_Mscale,
-   result_dir: LOGDIR,
+   result_dir: "logs/rs19_test_nevada_0",
   },
 ]

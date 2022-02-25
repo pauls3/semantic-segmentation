@@ -1,0 +1,19 @@
+
+
+CMD: "python -m torch.distributed.launch --nproc_per_node=1 train.py"
+
+HPARAMS: [
+  {
+   dataset: railsem19,
+   syncbn: true,
+   apex: true,
+   fp16: true,
+   eval: val,
+   n_scales: "0.5,1.0,2.0",
+   # supervised_mscale_loss_wt: 0.05,
+   snapshot: "/home/stanik/repos/semantic-segmentation/logs/rs19/cityscapes_sota_rs19_finetune_bs_1/best_checkpoint_ep98.pth",
+   arch: ocrnet.HRNet_Mscale,
+   result_dir: "logs/rs19_test_0",
+   RUNX.TAG: '{arch}',
+  },
+]
