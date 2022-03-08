@@ -50,9 +50,9 @@ class Loader(BaseLoader):
             if mode == 'train':
                 img_root = os.path.join(root, 'train_images')
                 mask_root = os.path.join(root, 'train_masks')
-            elif mode == 'val':
-                img_root = os.path.join(root, 'validation_images')
-                mask_root = os.path.join(root, 'validation_masks')
+            # elif mode == 'val':
+            #     img_root = os.path.join(root, 'validation_images')
+            #     mask_root = os.path.join(root, 'validation_masks')
             else:
                 img_root = os.path.join(root, 'test_images')
                 mask_root = os.path.join(root, 'test_masks')
