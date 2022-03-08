@@ -425,6 +425,11 @@ def main():
                  calc_metrics=False, dump_assets=args.dump_assets,
                  dump_all_images=True)
         return 0
+    elif args.eval =='test':
+        validate(val_loader, net, criterion=criterion_val, optim=optim, epoch=0,
+                     dump_assets=args.dump_assets,
+                     dump_all_images=args.dump_all_images,
+                     calc_metrics=not args.no_metrics)
     elif args.eval is not None:
         raise 'unknown eval option {}'.format(args.eval)
 
