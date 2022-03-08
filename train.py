@@ -430,6 +430,7 @@ def main():
                      dump_assets=args.dump_assets,
                      dump_all_images=args.dump_all_images,
                      calc_metrics=not args.no_metrics)
+        return 0
     elif args.eval is not None:
         raise 'unknown eval option {}'.format(args.eval)
 
