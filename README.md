@@ -106,3 +106,8 @@ This training run should deliver a model that achieves 84.7 IOU.
 > python -m runx.runx  scripts/train_cityscapes_sota.yml -i
 ```
 Again, use `-n` to do a dry run and just print out the command. This should result in a model with 86.8 IOU. If you run out of memory, try to lower the crop size or turn off rmi_loss.
+
+
+## Links for Data and Trained Model Checkpoints for RailSem19 Dataset
+Models: https://drive.google.com/drive/folders/1GtwJjX1PN8nuHLgbTLceUUWL3gYTWi7G?usp=sharing
+RS19 Test Set: https://drive.google.com/file/d/18TNOR7ZhhbGW1zJ4EgpPLYiWBCi-F4OI/view?usp=sharing
