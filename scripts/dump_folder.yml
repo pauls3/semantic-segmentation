@@ -1,6 +1,8 @@
 # Run Evaluation and Dump Images on Cityscapes with a pretrained model
 
-CMD: "python -m torch.distributed.launch --nproc_per_node=1 train.py"
+# CUDA_VISIBLE_DEVICES="2" python3 -m runx.runx scripts/dump_folder.yml -i
+
+CMD: "python3 -m torch.distributed.launch --nproc_per_node=1 train.py"
 
 HPARAMS: [
   {
@@ -16,6 +18,6 @@ HPARAMS: [
    n_scales: "0.5,1.0,2.0",
    snapshot: "/home/stanik/repos/semantic-segmentation/logs/rs19/cityscapes_sota_rs19_finetune_bs_1/best_checkpoint_ep98.pth",
    arch: ocrnet.HRNet_Mscale,
-   result_dir: "logs/rs19/test_inference_0"
+   result_dir: "logs/rs19/test_inference_1"
   },
 ]

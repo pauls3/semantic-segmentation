@@ -565,6 +565,9 @@ def validate(val_loader, net, criterion, optim, epoch,
     val_loss = AverageMeter()
     iou_acc = 0
 
+    start_time = time.time()
+
+
     for val_idx, data in enumerate(val_loader):
         input_images, labels, img_names, _ = data 
         if args.dump_for_auto_labelling or args.dump_for_submission:
@@ -593,6 +596,9 @@ def validate(val_loader, net, criterion, optim, epoch,
 
         if val_idx % 20 == 0:
             logx.msg(f'validating[Iter: {val_idx + 1} / {len(val_loader)}]')
+
+    end_time = time.time()
+    print("Total time: ", end_time - start_time)
 
     was_best = False
     if calc_metrics:
