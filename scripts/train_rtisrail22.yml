@@ -1,8 +1,9 @@
 # Train cityscapes using Mapillary-pretrained weights
 # Requires 32GB GPU
 # Adjust nproc_per_node according to how many GPUs you have
+#  python3 -m runx.runx scripts/train_rtisrail22.yml -i
 
-CMD: "python -m torch.distributed.launch --nproc_per_node=2 train.py"
+CMD: "python3 -m torch.distributed.launch --nproc_per_node=2 train.py"
 
 HPARAMS: [
   {
