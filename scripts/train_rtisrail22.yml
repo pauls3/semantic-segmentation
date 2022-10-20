@@ -1,0 +1,28 @@
+# Train cityscapes using Mapillary-pretrained weights
+# Requires 32GB GPU
+# Adjust nproc_per_node according to how many GPUs you have
+
+CMD: "python -m torch.distributed.launch --nproc_per_node=2 train.py"
+
+HPARAMS: [
+  {
+   dataset: rtisrail22,
+   cv: 0,
+   syncbn: true,
+   apex: true,
+   fp16: true,
+   gblur: true,
+   brt_aug: true,
+   crop_size: "1024,2048",
+   bs_trn: 1,
+   poly_exp: 2,
+   lr: 1e-4,
+   rmi_loss: true,
+   max_epoch: 1,
+   n_scales: ['0.5,1.0,2.0'],
+   supervised_mscale_loss_wt: 0.1,
+   arch: ocrnet.HRNet_Mscale,
+   result_dir: "logs/rr22/rtisrail22_test_0",
+   RUNX.TAG: '{arch}',
+  },
+]

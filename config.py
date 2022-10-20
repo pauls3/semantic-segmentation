@@ -79,6 +79,9 @@ __C.DATASET = AttrDict()
 __C.DATASET.RAILSEM19 = \
   os.path.join(__C.ASSETS_PATH, 'rtis_lab/data/RailSem19/custom_split')
 
+__C.DATASET.RTISRAIL22 = \
+  os.path.join(__C.ASSETS_PATH, 'rtis_lab/data/rtis-rail-2022v2/custom_split')
+
 #Cityscapes Dir Location
 __C.DATASET.CITYSCAPES_DIR = \
   os.path.join(__C.ASSETS_PATH, 'rtis_lab/data/Cityscapes')
