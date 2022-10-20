@@ -305,7 +305,7 @@ def build_epoch(imgs, centroids, num_classes, train):
 
     # now add uniform sampling
     for class_id in range(num_classes):
-        msg = "cls {} len {}".format(class_id, len(centroids[class_id]))
+        msg = "cls {} len {}".format(class_id, len(centroids.get(class_id, [])))
         logx.msg(msg)
     for class_id in range(num_classes):
         if cfg.DATASET.CLASS_UNIFORM_BIAS is not None:
@@ -313,7 +313,7 @@ def build_epoch(imgs, centroids, num_classes, train):
             num_per_class_biased = int(num_per_class * bias)
         else:
             num_per_class_biased = num_per_class
-        centroid_len = len(centroids[class_id])
+        centroid_len = len(centroids.get(class_id, []))
         if centroid_len == 0:
             pass
         else:
