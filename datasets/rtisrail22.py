@@ -10,7 +10,7 @@ from datasets import uniform
 
 
 class Loader(BaseLoader):
-    num_classes = 13
+    num_classes = 19
     ignore_label = 255
     trainid_to_name = {}
     color_mapping = []
