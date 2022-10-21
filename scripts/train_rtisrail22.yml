@@ -21,11 +21,11 @@ HPARAMS: [
    poly_exp: 2,
    lr: 1e-4,
    rmi_loss: true,
-   max_epoch: 1,
+   max_epoch: 500,
    n_scales: ['0.5,1.0,2.0'],
    supervised_mscale_loss_wt: 0.1,
    arch: ocrnet.HRNet_Mscale,
-   result_dir: "logs/rr22/rtisrail22_train_0",
+   result_dir: "logs/rr22/rtisrail22_train_1",
    RUNX.TAG: '{arch}',
   },
 ]
