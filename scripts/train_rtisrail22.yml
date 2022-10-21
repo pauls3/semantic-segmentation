@@ -23,7 +23,7 @@ HPARAMS: [
    rmi_loss: true,
    max_epoch: 500,
    n_scales: ['0.5,1.0,2.0'],
-   supervised_mscale_loss_wt: 0.1,
+   supervised_mscale_loss_wt: 0.05,
    snapshot: "checkpoints/rs19_cityscapes_ep98_miou_0.7385.pth",
    arch: ocrnet.HRNet_Mscale,
    result_dir: "logs/rr22/rtisrail22_train_2",
