@@ -26,7 +26,7 @@ class Loader(BaseLoader):
 
         root = cfg.DATASET.RTISRAIL22
         # config_fn = os.path.join(root, '/home/stanik/rtis_lab/data/RailSem19/rs19-config.json')
-        config_fn = '/home/stanik/rtis_lab/data/rtis-rail-2022v7/class_to_id_new.json'
+        config_fn = '/home/stanik/rtis_lab/data/rtis-rail-2022v7/class_to_id_USE_THIS.json'
         self.fill_colormap_and_names(config_fn)
 
         ######################################################################
