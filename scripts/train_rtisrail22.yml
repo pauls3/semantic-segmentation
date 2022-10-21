@@ -3,9 +3,9 @@
 # Adjust nproc_per_node according to how many GPUs you have
 #  python3 -m runx.runx scripts/train_rtisrail22.yml -i
 
-# CUDA_VISIBLE_DEVICES="0,1,2,3,4,5,6,7" python3 -m runx.runx scripts/train_rtisrail22.yml -i
+# CUDA_VISIBLE_DEVICES="4,5,6,7" python3 -m runx.runx scripts/train_rtisrail22.yml -i
 
-CMD: "python3 -m torch.distributed.launch --nproc_per_node=8 train.py"
+CMD: "python3 -m torch.distributed.launch --nproc_per_node=4 train.py"
 
 HPARAMS: [
   {
@@ -26,7 +26,7 @@ HPARAMS: [
    supervised_mscale_loss_wt: 0.1,
    snapshot: "checkpoints/rs19_cityscapes_ep98_miou_0.7385.pth",
    arch: ocrnet.HRNet_Mscale,
-   result_dir: "logs/rr22/rtisrail22_train_1",
+   result_dir: "logs/rr22/rtisrail22_train_2",
    RUNX.TAG: '{arch}',
   },
 ]
