@@ -3,7 +3,7 @@
 # Adjust nproc_per_node according to how many GPUs you have
 #  python3 -m runx.runx scripts/train_rtisrail22.yml -i
 
-CMD: "python3 -m torch.distributed.launch --nproc_per_node=2 train.py"
+CMD: "python3 -m torch.distributed.launch --nproc_per_node=4 train.py"
 
 HPARAMS: [
   {
@@ -14,7 +14,7 @@ HPARAMS: [
    fp16: true,
    gblur: true,
    brt_aug: true,
-   crop_size: "1024,2048",
+   crop_size: "1024,1920",
    bs_trn: 1,
    poly_exp: 2,
    lr: 1e-4,
@@ -23,7 +23,7 @@ HPARAMS: [
    n_scales: ['0.5,1.0,2.0'],
    supervised_mscale_loss_wt: 0.1,
    arch: ocrnet.HRNet_Mscale,
-   result_dir: "logs/rr22/rtisrail22_test_0",
+   result_dir: "logs/rr22/rtisrail22_train_0",
    RUNX.TAG: '{arch}',
   },
 ]
