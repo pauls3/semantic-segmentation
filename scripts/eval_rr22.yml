@@ -1,0 +1,19 @@
+# CUDA_VISIBLE_DEVICES="2" python3 -m runx.runx scripts/train_rtisrail22.yml -i
+
+CMD: "python -m torch.distributed.launch --nproc_per_node=1 train.py"
+
+HPARAMS: [
+  {
+   dataset: rtisrail22,
+   syncbn: true,
+   apex: true,
+   fp16: true,
+   eval: test,
+   n_scales: "0.5,1.0,2.0",
+   # supervised_mscale_loss_wt: 0.05,
+   snapshot: "/home/stanik/repos/semantic-segmentation/checkpoints/rr22_rs19_city_miou_0.8964.pth",
+   arch: ocrnet.HRNet_Mscale,
+   result_dir: "logs/rr22_test_0",
+   RUNX.TAG: '{arch}',
+  },
+]
