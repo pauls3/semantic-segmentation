@@ -11,9 +11,9 @@ HPARAMS: [
    eval: test,
    n_scales: "0.5,1.0,2.0",
    # supervised_mscale_loss_wt: 0.05,
-   snapshot: "/home/stanik/repos/semantic-segmentation/semantic-segmentation/logs/rr22/rtisrail22_train_4/best_checkpoint_ep422.pth",
+   snapshot: "checkpoints/rr22_rs19_city_miou_0.8964.pth",
    arch: ocrnet.HRNet_Mscale,
-   result_dir: "logs/rr22_test_1",
+   result_dir: "logs/rr22_test_2",
    RUNX.TAG: '{arch}',
   },
 ]
