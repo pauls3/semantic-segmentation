@@ -568,6 +568,7 @@ def validate(val_loader, net, criterion, optim, epoch,
     start_time = time.time()
 
 
+    new_time = 0
     for val_idx, data in enumerate(val_loader):
         input_images, labels, img_names, _ = data 
         if args.dump_for_auto_labelling or args.dump_for_submission:
@@ -577,10 +578,15 @@ def validate(val_loader, net, criterion, optim, epoch,
             if os.path.exists(os.path.join(dumper.save_dir, submit_fn)):
                 continue
 
+        start_time_0 = time.time()
         # Run network
         assets, _iou_acc = \
             eval_minibatch(data, net, criterion, val_loss, calc_metrics,
                           args, val_idx)
+
+        end_time_0 = time.time()
+
+        new_time = new_time + end_time_0 - start_time_0
 
         iou_acc += _iou_acc
 
@@ -599,6 +605,7 @@ def validate(val_loader, net, criterion, optim, epoch,
 
     end_time = time.time()
     print("Total time: ", end_time - start_time)
+    print("Forward pass time: ", new_time)
 
     was_best = False
     if calc_metrics:

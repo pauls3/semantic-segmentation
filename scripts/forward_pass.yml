@@ -1,0 +1,23 @@
+# Run Evaluation and Dump Images on Cityscapes with a pretrained model
+
+# CUDA_VISIBLE_DEVICES="2" python3 -m runx.runx scripts/dump_folder.yml -i
+
+CMD: "python3 -m torch.distributed.launch --nproc_per_node=1 train.py"
+
+HPARAMS: [
+  {
+   dataset: railsem19,
+   syncbn: true,
+   apex: true,
+   fp16: true,
+   bs_val: 1,
+   eval: folder,
+   eval_folder: "/shared/rtis_lab/data/RailSem19/custom_split/test_images/",
+   dump_assets: false,
+   dump_all_images: false,
+   n_scales: "0.5,1.0,2.0",
+   snapshot: "checkpoints/rr22_rs19_city_miou_0.8964.pth",
+   arch: ocrnet.HRNet_Mscale,
+   result_dir: "logs/rr22/test_on_rs19"
+  },
+]
