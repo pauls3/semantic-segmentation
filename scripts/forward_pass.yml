@@ -16,8 +16,8 @@ HPARAMS: [
    dump_assets: false,
    dump_all_images: false,
    n_scales: "0.5,1.0,2.0",
-   snapshot: "checkpoints/rr22_rs19_city_miou_0.8964.pth",
+   snapshot: "checkpoints/rs19_cityscapes_ep98_miou_0.7385.pth",
    arch: ocrnet.HRNet_Mscale,
-   result_dir: "logs/rr22/test_on_rs19"
+   result_dir: "logs/rs19/test_on_rs19"
   },
 ]
