@@ -59,8 +59,8 @@ def cities_cv_split(root, split, cv_split):
 
     cv_split == 3 means use train + val
     """
-    trn_path = path.join(root, 'leftImg8bit_trainvaltest/leftImg8bit', 'train')
-    val_path = path.join(root, 'leftImg8bit_trainvaltest/leftImg8bit', 'val')
+    trn_path = path.join(root, 'fine_images_all/', 'train')
+    val_path = path.join(root, 'fine_images_all/', 'val')
 
     trn_cities = ['train/' + c for c in os.listdir(trn_path)]
     trn_cities = sorted(trn_cities)  # sort to insure reproducibility
