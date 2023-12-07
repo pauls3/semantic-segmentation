@@ -125,7 +125,7 @@ class Loader(BaseLoader):
         self.fill_colormap()
         img_ext = 'png'
         mask_ext = 'png'
-        img_root = path.join(self.root, 'leftImg8bit_trainvaltest/leftImg8bit')
+        img_root = path.join(self.root, 'fine_images_all')
         mask_root = path.join(self.root, 'gtFine_trainvaltest/gtFine')
         if mode == 'folder':
             self.all_imgs = make_dataset_folder(eval_folder)
