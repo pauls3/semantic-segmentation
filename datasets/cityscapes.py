@@ -126,7 +126,7 @@ class Loader(BaseLoader):
         img_ext = 'png'
         mask_ext = 'png'
         img_root = path.join(self.root, 'fine_images_all')
-        mask_root = path.join(self.root, 'gtFine_trainvaltest/gtFine')
+        mask_root = path.join(self.root, 'gtFine')
         if mode == 'folder':
             self.all_imgs = make_dataset_folder(eval_folder)
         else:
