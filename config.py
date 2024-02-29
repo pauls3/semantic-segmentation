@@ -82,6 +82,9 @@ __C.DATASET.RAILSEM19 = \
 __C.DATASET.RTISRAIL22 = \
   os.path.join(__C.ASSETS_PATH, 'rtis_lab/data/rtis-rail-2022v7/custom_split')
 
+__C.DATASET.FLAME = \
+  os.path.join(__C.ASSETS_PATH, 'rtis_lab/data/FLAME/custom_split')
+
 #Cityscapes Dir Location
 __C.DATASET.CITYSCAPES_DIR = \
   os.path.join(__C.ASSETS_PATH, 'rtis_lab/data/Cityscapes')

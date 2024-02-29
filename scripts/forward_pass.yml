@@ -1,6 +1,6 @@
 # Run Evaluation and Dump Images on Cityscapes with a pretrained model
 
-# CUDA_VISIBLE_DEVICES="2" python3 -m runx.runx scripts/dump_folder.yml -i
+# CUDA_VISIBLE_DEVICES="7" python3 -m runx.runx scripts/forward_pass.yml -i
 
 CMD: "python3 -m torch.distributed.launch --nproc_per_node=1 train.py"
 
