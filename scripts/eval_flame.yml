@@ -1,0 +1,19 @@
+# CUDA_VISIBLE_DEVICES="7" python3 -m runx.runx scripts/eval_flame.yml -i
+
+CMD: "python3 -m torch.distributed.launch --nproc_per_node=1 train.py"
+
+HPARAMS: [
+  {
+   dataset: flame,
+   syncbn: true,
+   apex: true,
+   fp16: true,
+   eval: test,
+   n_scales: "0.5,1.0,2.0",
+   # supervised_mscale_loss_wt: 0.05,
+   snapshot: "logs/flame/0/best_checkpoint_ep112.pth",
+   arch: ocrnet.HRNet_Mscale,
+   result_dir: "logs/flame_test_0",
+   RUNX.TAG: '{arch}',
+  },
+]
