@@ -18,7 +18,7 @@ HPARAMS: [
    crop_size: "1080,1920",
    bs_trn: 1,
    poly_exp: 2,
-   lr: 5e-5,
+   lr: 1e-4,
    rmi_loss: true,
    max_epoch: 150,
    n_scales: ['1.0,2.0,2.5'],
