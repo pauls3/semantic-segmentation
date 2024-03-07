@@ -25,7 +25,7 @@ HPARAMS: [
    supervised_mscale_loss_wt: 0.1,
    snapshot: "/home/stanik/repos/semantic-segmentation/semantic-segmentation/checkpoints/cityscapes_trainval_ocr.HRNet_Mscale_nimble-chihuahua.pth",
    arch: ocrnet.HRNet_Mscale,
-   result_dir: "logs/flame/1",
+   result_dir: "logs/flame/2",
    RUNX.TAG: '{arch}',
   },
 ]
