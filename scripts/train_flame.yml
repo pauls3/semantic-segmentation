@@ -21,7 +21,7 @@ HPARAMS: [
    lr: 1e-4,
    rmi_loss: true,
    max_epoch: 150,
-   n_scales: ['1.5,1.0,2.0'],
+   n_scales: ['0.5,1.0,2.0'],
    supervised_mscale_loss_wt: 0.1,
    snapshot: "/home/stanik/repos/semantic-segmentation/semantic-segmentation/checkpoints/cityscapes_trainval_ocr.HRNet_Mscale_nimble-chihuahua.pth",
    arch: ocrnet.HRNet_Mscale,
