@@ -40,7 +40,7 @@ class Loader(BaseLoader):
                     'val': 'validation',
                     'test': 'testing'}
             split_name = splits[mode]
-            img_ext = 'png'#'jpg'
+            img_ext = 'jpg'
             mask_ext = 'png'
 
         # print(----------------------------------------)
