@@ -12,12 +12,12 @@ HPARAMS: [
    fp16: true,
    bs_val: 1,
    eval: folder,
-   eval_folder: "/shared/rtis_lab/data/RailSem19/custom_split/test_images/",
+   eval_folder: "/home/stanik/repos/semantic-segmentation/semantic-segmentation/raw_frames_for_gif/",
    dump_assets: true,
    dump_all_images: true,
    n_scales: "0.5,1.0,2.0",
    snapshot: "checkpoints/rr22_rs19_city_miou_0.8964.pth",
    arch: ocrnet.HRNet_Mscale,
-   result_dir: "logs/rr22/test_on_rs19"
+   result_dir: "logs/rr22/frames_gif"
   },
 ]
