@@ -6,18 +6,18 @@ CMD: "python3 -m torch.distributed.launch --nproc_per_node=1 train.py"
 
 HPARAMS: [
   {
-   dataset: rtisrail22,
+   dataset: flame,
    syncbn: true,
    apex: true,
    fp16: true,
    bs_val: 1,
    eval: folder,
-   eval_folder: "/home/stanik/repos/semantic-segmentation/semantic-segmentation/raw_frames_for_gif/",
+   eval_folder: "/shared/rtis_lab/data/FLAME/custom_split/test_images/",
    dump_assets: true,
    dump_all_images: true,
    n_scales: "0.5,1.0,2.0",
-   snapshot: "checkpoints/rr22_rs19_city_miou_0.8964.pth",
+   snapshot: "logs/flame/2/best_checkpoint_ep89.pth",
    arch: ocrnet.HRNet_Mscale,
-   result_dir: "logs/rr22/frames_gif"
+   result_dir: "logs/flame/flame_test_dump"
   },
 ]
